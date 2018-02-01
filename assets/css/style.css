@@ -1,18 +1,81 @@
-
-
-
 body { 
 
 	background-image: url("https://cdn.thinglink.me/api/image/460487044318101504/1240/10/scaletowidth");
-	
+  	overflow: hidden;
  }
 
 .container {
 	width: 960px;
+}
+
+h1 {
+	text-align: center;
+	color: rgb(9, 95, 74) !important;
 
 }
 
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
+.jumbotron {
+	background-color: rgb(190, 229, 233);
+	margin-color: rgb(9, 95, 74) !important;
+}
+
+.panel-title {
+	text-align: center;
+	color: rgb(21, 142, 131);
+	background-color: (190, 228, 232);
+	font-style: bold;
+}
+
+.panel-body {
+	text-align: center
+	color: rgb(21, 142, 131)
+	background-color: (190, 228, 232);
+	font-style: bold;
+}
+
+#winCount {
+	color: rgb(21, 142, 131) !important;
+}
+
+#wrongGuesses {
+	text-align: right;
+	color: rgb(21, 142, 131);
+}
+
+#wordToGuess {
+	padding: 20px 20px 0px 20px;
+	font-style: bold;
+	color: rgb(21, 142, 131);
+	text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 
 
 

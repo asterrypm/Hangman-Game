@@ -13,7 +13,7 @@
 
 <body>
 <!--<script type="text/javascript" src="Audio-HTML5.js"></script>-->
-  	
+  	<img src="assets/images/honu image.jpg" class="bg">
   		 <!-- Container for main page contents -->
   <div class="container">
 
@@ -21,7 +21,7 @@
     <div class="row" id="Header">
 
 		<!-- 'Hangman Console' column -->
-      <div class="col-sm-12" id="about-me">
+      <div class="col-sm-10" id="mainheader">
       	<div class="jumbotron">
   			<h1>Hangman!</h1>
  		</div>	
@@ -32,11 +32,14 @@
 	<div class="row">
 
 		<!-- 'Score Panel' Section -->
-      	<div class="col-sm-2" id="connect">
+      	<!--<div class="col-sm-2">
+        <!--row containing just the 'Panel header' -->
+
+        <div class="col-sm-2">
         <!-- Row containing just the 'Panel header' -->
    
         <div class="panel panel-default">
-  			<div class="panel-heading">
+  			<div class="panel-heading" id="scorepanelheader">
     			<h3 class="panel-title">Score Stats</h3>
   			</div>
   		<!-- Row containing just the 'Panel content' -->	
@@ -48,7 +51,7 @@
 
       </div> <!-- End Score Panel' Section -->
 
-      <div class="col-sm-10" id="connect">
+      <div class="col-sm-6" class="panel-body">
         <!-- Row containing just the 'Panel header' -->
    
         <div class="panel panel-default">
@@ -56,8 +59,8 @@
     			<h3 class="panel-title">Press any key to get started!</h3>
   			</div>
   		<!-- Row containing just the 'Panel content' -->	
-  			<div class="panel-body" id="wordToGuess">
-    		<p>	_ _ _ _ _ _ _ _ _ _<p><br><br>
+  			<div class="panel-body">
+    		<p id= "wordToGuess">	_ _ _ _ _ _ _ _ _ _<p><br><br>
     		<p id="wrongGuesses">
     			Letters Guessed:
     		</p>

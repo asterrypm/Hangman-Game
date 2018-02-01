@@ -93,7 +93,7 @@ function roundComplete () {
 
 
 	//Did player win?:
-	if (lettersinWord.toString() == lettersAndSpaces.toString()) {
+	if (isLettersInWord.toString() == lettersAndSpaces.toString()) {
 		winCount++;
 		alert("You Win!");
 
@@ -132,4 +132,5 @@ document.onkeyup = function(event) {
 
 //Audio
 //---------------------------------------------------------------------------------------------------------------------------------
+
 
