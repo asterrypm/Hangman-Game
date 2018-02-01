@@ -1,6 +1,7 @@
 //GLOBAL VARIABLES
 //------------------------------------------------------------------------------------------------------------------
 
+
 var wordOptions = ["octopus", "shark", "dolphin", "eel", "lobster", "whale", "turtle", "jellyfish", "seal", "fish", "starfish", "seahorse", "anemone", "", ""];
 var wordAnswer = "";
 var letterCount = [];
@@ -12,6 +13,20 @@ var isLetterInWord = false;
 var winCount = 0;
 var lossCount = 0;
 var guessLeft = 0;
+
+//Var defined: wordOptions: possible mystery words from array;
+//wordAnswer: Randomly chosen mystery word
+//letterCount: how many characters are in mystery word
+//numofSpaces: how many dashed for the characters in the word
+//lettersAndSpaces: the ------ the letters and spaces
+//wrongGuesses: incorrect letters guessed
+//letterGuessed: letter player guesses
+//isLetterInWord: boolean variable used to review word for letters
+//winCount/lossCount: number of times won or lost
+//guessLeft: remaining guesses left for any word before Hangman and game is lost
+
+
+
 
 
 //FUNCTIONS
@@ -130,7 +145,8 @@ document.onkeyup = function(event) {
 	checkletters(letterGuessed);
 }
 
-//Audio
+//background audio
 //---------------------------------------------------------------------------------------------------------------------------------
-
+var aud = document.getElementById("myAudio");
+aud.volume = 0.5;
 
