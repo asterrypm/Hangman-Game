@@ -40,11 +40,10 @@
     			<h3 class="panel-title">Score Stats</h3>
   			</div>
   		<!-- Row containing just the 'Panel content' -->	
-  			<div class="panel-body">
-    			Wins:  <br>
-    			Losses: 
-    			Guesses: 
-  			</div>
+  			<div class="panel-body">Wins: <span id="winCount"> </span></div>
+  			<div class="panel-body">Losses: <span id="lossCount"></span></div>
+    		<div class="panel-body">Guesses: <span id="numofSpaces"></span></div>
+    	
 		</div>
 
       </div> <!-- End Score Panel' Section -->
@@ -57,9 +56,9 @@
     			<h3 class="panel-title">Press any key to get started!</h3>
   			</div>
   		<!-- Row containing just the 'Panel content' -->	
-  			<div class="panel-body">
+  			<div class="panel-body" id="wordToGuess">
     		<p>	_ _ _ _ _ _ _ _ _ _<p><br><br>
-    		<p id="guesses">
+    		<p id="wrongGuesses">
     			Letters Guessed:
     		</p>
   			</div>
@@ -70,7 +69,7 @@
     </div> <!-- End 'row' that wraps page content -->
   </div> <!-- End 'container' -->
 
-	<script src="logic.js"></script>
+	<script src="assets/javascript/game.js"></script>
 
 </body>
 </html>
