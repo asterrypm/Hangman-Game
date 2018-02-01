@@ -77,7 +77,7 @@ function checkletters(letter) {
 			isLetterInWord = true; 
 		}
 	}
-
+}
 //Check if letter exists in the word and if then add letter to screen from array.
 	
 		for (var i=0; i<numofSpaces; i++) {
@@ -147,6 +147,6 @@ document.onkeyup = function(event) {
 
 //background audio
 //---------------------------------------------------------------------------------------------------------------------------------
-var aud = document.getElementById("myAudio");
-aud.volume = 0.5;
+//var aud = document.getElementById("myAudio");
+//aud.volume = 0.5;
 

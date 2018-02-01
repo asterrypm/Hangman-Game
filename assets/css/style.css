@@ -37,17 +37,26 @@ img.bg {
 .panel-title {
 	text-align: center;
 	color: rgb(21, 142, 131);
-	background-color: (190, 228, 232);
 	font-style: bold;
+}
+
+#scorepanelheader {
+	background-color: rgb(190, 228, 232);
 }
 
 .panel-body {
-	text-align: center
-	color: rgb(21, 142, 131)
-	background-color: (190, 228, 232);
+	text-align: center;
+	color: rgb(21, 142, 131);
+	background-color: rgb(190, 228, 232);
 	font-style: bold;
 }
 
+.panel-heading{
+	text-align: center;
+	color: white;
+	background-color: rgb(21, 142, 131);
+	font-style: bold;
+}
 #winCount {
 	color: rgb(21, 142, 131) !important;
 }
