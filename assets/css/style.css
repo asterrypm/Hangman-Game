@@ -30,8 +30,9 @@ img.bg {
 }
 
 .jumbotron {
-	background-color: rgb(190, 229, 233);
+	background-color: rgba(190, 229, 233, .10);
 	margin-color: rgb(9, 95, 74) !important;
+
 }
 
 .panel-title {
@@ -41,11 +42,14 @@ img.bg {
 }
 
 #scorepanelheader {
-	background-color: rgb(190, 228, 232);
+	text-align: center;
+	color: rgb(21, 142, 131);
+	background-color: white;
+	font-style: bold;
 }
 
 .panel-body {
-	text-align: center;
+	text-align: left;
 	color: rgb(21, 142, 131);
 	background-color: rgb(190, 228, 232);
 	font-style: bold;

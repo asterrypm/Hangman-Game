@@ -2,6 +2,9 @@
 //------------------------------------------------------------------------------------------------------------------
 
 
+var winCount = 0;
+var lossCount = 0;
+var guessLeft = 10;
 var wordOptions = ["octopus", "shark", "dolphin", "eel", "lobster", "whale", "turtle", "jellyfish", "seal", "fish", "starfish", "seahorse", "anemone", "", ""];
 var wordAnswer = "";
 var letterCount = [];
@@ -10,9 +13,7 @@ var lettersAndSpaces = [];
 var wrongGuesses = [];
 var letterGuessed = [];
 var isLetterInWord = false;
-var winCount = 0;
-var lossCount = 0;
-var guessLeft = 0;
+
 
 //Var defined: wordOptions: possible mystery words from array;
 //wordAnswer: Randomly chosen mystery word

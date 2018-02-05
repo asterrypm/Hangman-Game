@@ -42,12 +42,12 @@
    
         <div class="panel panel-default">
   			<div class="panel-heading" id="scorepanelheader">
-    			<h3 class="panel-title">Score Stats</h3>
+    			<h3 class="panel-title">Score Stats:</h3>
   			</div>
   		<!-- Row containing just the 'Panel content' -->	
   			<div class="panel-body">Wins: <span id="winCount"> </span></div>
   			<div class="panel-body">Losses: <span id="lossCount"></span></div>
-    		<div class="panel-body">Guesses: <span id="numofSpaces"></span></div>
+    		<div class="panel-body">Guesses: <span id="guessesRemaining"></span></div>
     	
 		</div>
 
@@ -62,9 +62,9 @@
   			</div>
   		<!-- Row containing just the 'Panel content' -->	
   			<div class="panel-body">
-    		<p id= "wordToGuess">	_ _ _ _ _ _ _ _ _ _<p><br><br>
-    		<p id="wrongGuesses">
-    			Letters Guessed:
+    		<p id= "underscoreWord" style="letter-spacing: 8px;">	_ _ _ _ _ _ _ _ _ _<p><br><br>
+    		<p> Letters Guessed:<span id="lettersGuessed"></span>
+    			
     		</p>
   			</div>
 		</div>
@@ -74,7 +74,7 @@
     </div> <!-- End 'row' that wraps page content -->
   </div> <!-- End 'container' -->
 
-	<script src="assets/javascript/game.js"></script>
+	<script src="assets/javascript/game1.js"></script>
 
 </body>
 </html>
@@ -96,33 +96,10 @@
 
 
 
-
-
-
-
-  	</div>
-   
-  </div>
- 	</div>
+  
 
  	
- 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  
-</script>
-</body>
 
-</html>
