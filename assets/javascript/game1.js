@@ -14,18 +14,18 @@ var lettersGuessed = [];
 //Functions
 //------------------------------------------------------------------
 
-//increment user win
+//add user wins
 function addWinCount() {
 	winCount++;
 }
 
-//increment user loss
+//add user losses
 function addLossCount() {
 	lossCount++;
 }
 
 //reduce user guesses
-function decreaseGuesses () {
+function decreaseGuesses() {
 	guessesRemaining--;
 }
 
@@ -44,15 +44,15 @@ function playerWin () {
 function playerLost() {
 	if (guessesRemaining === 0) {
 		return true
-	}else {
+	} else {
 		return false;
 	}
 }
 
 
 //choose wordAnswer from wordOptions
-function randomwordAnswer () {
-var index = Math.floor(Math.random() * 15);
+function randomWordAnswer () {
+var index = Math.floor(Math.random() * wordOptions.length);
 	wordAnswer = wordOptions [index];
 }
 
@@ -60,7 +60,7 @@ var index = Math.floor(Math.random() * 15);
 //handles user guess
 function replaceBlank(playerGuess){
 	for (var i = 0; i < wordAnswer.length; i++) {
-		if (playerGuess === wordAnswer[i]){
+		if (playerGuess === wordAnswer[i]) {
 			//replace index of underscore word with playerGuess;
 			underscoreWord[i] = playerGuess;
 		} 
@@ -68,23 +68,25 @@ function replaceBlank(playerGuess){
 }
 
 //test for letter in word
-function guessCorrect (playerGuess) {
+function guessCorrect(playerGuess) {
 	if (wordAnswer.indexOf(playerGuess) !== -1) {
 		return true;
-	} else false;
+	} else {
+		return false;
+	}
 }
 
 //create underscoreWord (after wordOptions word chosen)
-function createUnderscoreWord () {
-	var underscoreChoices = []
+function createUnderscoreWord() {
+	var underscoreArray = []
 	for (var i = 0; i < wordAnswer.length; i++) {
-		underscoreChoices.push("_");
+		underscoreArray.push("_");
 	}
-	underscoreWord = underscoreChoices;
+	underscoreWord = underscoreArray;
 }
 
 // add incorrect guesses to Letters Guessed in array
-function addLettersGuessed (playerGuess) {
+function addLettersGuessed(playerGuess) {
 	lettersGuessed.push(playerGuess);
 }
 
@@ -94,16 +96,16 @@ function isGuessAllowed(playerGuess) {
 		lettersGuessed.indexOf(playerGuess) === -1)
 	 {
 		return true;
-	}else {
+	} else {
 		return false;
 	}
 }
 
 //restart game/reset
-function reset (){
+function reset() {
 	guessesRemaining = 10;
 	lettersGuessed = [];
-	randomwordAnswer();
+	randomWordAnswer();
 	createUnderscoreWord();
 	updateBrowser();
 }
@@ -114,12 +116,12 @@ function updateBrowser(){
 	document.getElementById('winCount').innerHTML = winCount;
 	document.getElementById('lossCount').innerHTML = lossCount;
 	document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
-	document.getElementById('underscoreWord').innerHTML = winCount;
-	document.getElementById('lettersGuessed').innerHTML = winCount;
+	document.getElementById('underscoreWord').innerHTML = underscoreWord;
+	document.getElementById('lettersGuessed').innerHTML = lettersGuessed;
 }
 
 //is guess a valid letter (not a character or other key)
-function isGuessALetter (playerGuess) {
+function isGuessALetter(playerGuess) {
 	var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	if (letters.indexOf(playerGuess) !== -1) {
 		return true;
@@ -132,7 +134,7 @@ function isGuessALetter (playerGuess) {
 function startGame(playerGuess) {
 	
 	//is the player guess a letter; isGuessALetter ()
-	if (isGuessALetter (playerGuess));{
+	if (isGuessALetter (playerGuess)) {
 
 		//if it is a letter, is guess allowed/valid/not dupicated; isGuessAllowed ()
 		if (isGuessAllowed(playerGuess)) {
@@ -146,8 +148,8 @@ function startGame(playerGuess) {
 
 			//if user guess is incorrect then push to lettersGuessed array
 			} else {
-				addLettersGuessed (playerGuess);
-				decreaseGuesses ();
+				addLettersGuessed(playerGuess);
+				decreaseGuesses();
 				updateBrowser();
 			}
 		}
@@ -163,7 +165,7 @@ function startGame(playerGuess) {
 	}
 
 	//Test if player lost
-	if (playerLost()){
+	if (playerLost()) {
 		addLossCount();
 		alert ("Sorry, you lose!  Please try again!");
 		reset();
